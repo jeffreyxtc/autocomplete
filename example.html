@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery UI Autocomplete Remote DataSource</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <script>
+  $( function() {
+    $("#myText").autocomplete({
+      source: "api.php",
+      minLength: 2,
+      select: function( event, ui ) {
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+    <h2>jQuery UI Autocomplete Remote DataSource</h2>
+    <p>Type minimum 2 characters in the textbox</p>
+    <input id="myText" />
+</body>
+</html>
