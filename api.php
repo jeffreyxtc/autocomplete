@@ -3,7 +3,8 @@ header('Access-Control-Allow-Methods: GET');
 header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
-$connection = mysqli_connect("localhost", "root", "") or trigger_error(mysqli_error(), E_USER_ERROR);
+$connection = mysqli_connect("localhost", "root", "") 
+or trigger_error(mysqli_error(), E_USER_ERROR);
 
 if (isset($_GET['term'])) {
     
