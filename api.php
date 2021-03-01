@@ -8,7 +8,7 @@ or trigger_error(mysqli_error(), E_USER_ERROR);
 
 if (isset($_GET['term'])) {
     
-	$q = $_GET['term'];
+    $q = $_GET['term'];
     
     mysqli_select_db($connection, "models");
     $query = "SELECT DISTINCT model FROM model
@@ -21,9 +21,9 @@ if (isset($_GET['term'])) {
     $models = array();
     while ($row_something = mysqli_fetch_assoc($something)) {
         
-        $models[] = $row_something['model'];
+		$models[] = $row_something['model'];
     }
+    echo json_encode($models);
+    exit;
 }
-echo json_encode($models);
-exit;
 ?>
