@@ -6,15 +6,13 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
       <script>
-         $(document).ready(auto);
-         $(window).on('resize', auto);
-         function auto() {
-         	$("#myText").autocomplete({
-         		source: "http://localhost/data/api.php",
-         		minLength: 2,
-         		select: function(event, ui) {}
-         	});
-         } 
+         $(window).on('load resize', function() {
+             $("#myText").autocomplete({
+                 source: "api.php",
+                 minLength: 2,
+                 select: function(event, ui) {}
+             });
+         });  
       </script>
    </head>
    <body>
